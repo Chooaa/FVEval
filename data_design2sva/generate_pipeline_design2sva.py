@@ -397,7 +397,7 @@ def gen_pipeline_design(
 ):
     ptr = 0
     operations_list = []
-    full_rtl_text = f"`define WIDTH {width}\n`define DEPTH {depth}\n"
+    full_rtl_text = f"`define WIDTH {width}\n`define DEPTH {sum(depths)}\n"
     sv_modules_rtl_text, pipeline_module_rtl_text, operations_list = gen_pipeline(
         depths=depths,
         op_recursive_depth=op_recursive_depth,
